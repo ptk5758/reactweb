@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  width: 100%;
+}
+.header {
+  text-align: center;
+  background-color: #eeeeee;
+  width: 100%; /*가로길이 단위 px(절대값), %(상대값) em*/
+  height: 200px; /*세로 길이 */
+}
+.content{
+  background-color: cornflowerblue;
+}
+.mybth {
+  width: 100px;
 }
 
 .App-logo {
