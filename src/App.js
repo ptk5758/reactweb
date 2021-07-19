@@ -4,23 +4,25 @@ import './App.css';
 
 class App extends Component {
 
+  state = {//영역 안에있는 num 은 5이다
+    num : 0
+  }
+
   render(){
+
+    var num = "5";
+
     return (
       <div className="App">
-        <div className="header">
-          <h1>대충 로고있느자리</h1>
-        </div>
-        <div className="content">
-          <div>
-            <input/>
-          </div>
-          <div>
-            <input/>
-          </div>
-          <button className="mybth">로그인</button>
-        </div>
+        <h1>초기화면</h1>
+        <h2>결과창 : "{this.state.num}"</h2>
+        <button onClick={()=>{
+          this.setState({
+            num: this.state.num + 1
+          });
+        }}>UP</button>
       </div>
-    );    
+    );
   }  
 }
 
