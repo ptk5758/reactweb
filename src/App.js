@@ -10,6 +10,10 @@ class App extends Component {
 
   render(){
 
+    function subFuntion() {
+      this.setState({num: this.state.num - 1});
+    }
+
     var num = "5";
 
     return (
@@ -21,6 +25,7 @@ class App extends Component {
             num: this.state.num + 1
           });
         }}>UP</button>
+        <button onClick={subFuntion.bind(this)}>Down</button>
       </div>
     );
   }  
