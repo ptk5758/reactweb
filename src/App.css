@@ -1,51 +1,22 @@
 .App {
   text-align: center;
   width: 100%;
-}
-.header {
-  text-align: center;
-  background-color: #eeeeee;
-  width: 100%; /*가로길이 단위 px(절대값), %(상대값) em*/
-  height: 200px; /*세로 길이 */
-}
-.content{
-  background-color: cornflowerblue;
-}
-.mybth {
-  width: 100px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.header{
+  background-color: darkkhaki;
+  height: 40%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content{
+  background-color: dodgerblue;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer{
+  background-color: gray;
+  height: 40%;
 }

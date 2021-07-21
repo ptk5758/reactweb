@@ -1,6 +1,8 @@
-import { render } from '@testing-library/react';
 import { Component } from 'react';
+import Header from './components/Header';
 import './App.css';
+import Content from './components/Content';
+import Footer from './components/Footer';
 
 class App extends Component {  
 
@@ -12,15 +14,30 @@ class App extends Component {
 
     function upCount() {
       this.setState({
-        value: 5
+        value: this.state.value+"*"
       });
+    }
+
+    function downCount() {
+
+      this.setState({
+        value: "*"
+      });
+
+      if(this.state.value < 0){
+        alert("0이하는 누를수 없음");
+        this.setState({
+          value: this.state.value+"*"
+        });
+      }
+
     }
 
     return (
       <div className="App">
-        <h1>카운트 만들기</h1>
-        <h2>{this.state.value}</h2>
-        <button onClick={upCount.bind(this)}>UP</button>
+        <Header/>
+        <Content/>
+        <Footer/>
       </div>
     );
   }  
