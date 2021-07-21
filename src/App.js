@@ -2,30 +2,25 @@ import { render } from '@testing-library/react';
 import { Component } from 'react';
 import './App.css';
 
-class App extends Component {
+class App extends Component {  
 
-  state = {//영역 안에있는 num 은 5이다
-    num : 0
+  state = {
+    value : 0
   }
 
   render(){
 
-    function subFuntion() {
-      this.setState({num: this.state.num - 1});
+    function upCount() {
+      this.setState({
+        value: 5
+      });
     }
-
-    var num = "5";
 
     return (
       <div className="App">
-        <h1>초기화면</h1>
-        <h2>결과창 : "{this.state.num}"</h2>
-        <button onClick={()=>{
-          this.setState({
-            num: this.state.num + 1
-          });
-        }}>UP</button>
-        <button onClick={subFuntion.bind(this)}>Down</button>
+        <h1>카운트 만들기</h1>
+        <h2>{this.state.value}</h2>
+        <button onClick={upCount.bind(this)}>UP</button>
       </div>
     );
   }  
